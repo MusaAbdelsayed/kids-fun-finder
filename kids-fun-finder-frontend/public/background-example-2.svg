@@ -1,0 +1,349 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Sky and ocean gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#45B7D1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#96CEB4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sandGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE082;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFCC02;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFE066;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD93D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="1200" height="400" fill="url(#skyGradient)"/>
+  
+  <!-- Ocean -->
+  <rect x="0" y="400" width="1200" height="200" fill="url(#oceanGradient)"/>
+  
+  <!-- Beach sand -->
+  <rect x="0" y="600" width="1200" height="200" fill="url(#sandGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="950" cy="100" r="50" fill="url(#sunGradient)"/>
+  <g stroke="#FFD700" stroke-width="3" opacity="0.8">
+    <line x1="950" y1="30" x2="950" y2="15"/>
+    <line x1="950" y1="185" x2="950" y2="200"/>
+    <line x1="880" y1="100" x2="865" y2="100"/>
+    <line x1="1020" y1="100" x2="1035" y2="100"/>
+    <line x1="909" y1="59" x2="898" y2="48"/>
+    <line x1="991" y1="141" x2="1002" y2="152"/>
+    <line x1="909" y1="141" x2="898" y2="152"/>
+    <line x1="991" y1="59" x2="1002" y2="48"/>
+  </g>
+  
+  <!-- Clouds -->
+  <g fill="white" opacity="0.9">
+    <ellipse cx="150" cy="80" rx="35" ry="20"/>
+    <ellipse cx="175" cy="75" rx="30" ry="15"/>
+    <ellipse cx="125" cy="75" rx="25" ry="12"/>
+    
+    <ellipse cx="400" cy="60" rx="40" ry="22"/>
+    <ellipse cx="430" cy="55" rx="32" ry="18"/>
+    <ellipse cx="370" cy="55" rx="28" ry="15"/>
+    
+    <ellipse cx="700" cy="90" rx="38" ry="20"/>
+    <ellipse cx="725" cy="85" rx="30" ry="16"/>
+    <ellipse cx="675" cy="85" rx="26" ry="14"/>
+  </g>
+  
+  <!-- Ocean waves -->
+  <g fill="white" opacity="0.6">
+    <ellipse cx="100" cy="580" rx="60" ry="8"/>
+    <ellipse cx="300" cy="585" rx="80" ry="10"/>
+    <ellipse cx="500" cy="575" rx="70" ry="9"/>
+    <ellipse cx="700" cy="590" rx="90" ry="12"/>
+    <ellipse cx="900" cy="580" rx="75" ry="8"/>
+    <ellipse cx="1100" cy="585" rx="65" ry="10"/>
+  </g>
+  
+  <!-- Palm trees -->
+  <g>
+    <!-- Palm tree 1 -->
+    <rect x="95" y="500" width="15" height="100" fill="#8B4513"/>
+    <ellipse cx="102" cy="490" rx="40" ry="15" fill="#228B22" transform="rotate(10 102 490)"/>
+    <ellipse cx="102" cy="485" rx="45" ry="18" fill="#32CD32" transform="rotate(-15 102 485)"/>
+    <ellipse cx="102" cy="480" rx="42" ry="16" fill="#90EE90" transform="rotate(25 102 480)"/>
+    <ellipse cx="102" cy="475" rx="38" ry="14" fill="#228B22" transform="rotate(-30 102 475)"/>
+    <ellipse cx="102" cy="470" rx="40" ry="15" fill="#32CD32" transform="rotate(45 102 470)"/>
+    
+    <!-- Palm tree 2 -->
+    <rect x="1080" y="520" width="18" height="80" fill="#A0522D"/>
+    <ellipse cx="1089" cy="510" rx="45" ry="18" fill="#228B22" transform="rotate(15 1089 510)"/>
+    <ellipse cx="1089" cy="505" rx="50" ry="20" fill="#32CD32" transform="rotate(-20 1089 505)"/>
+    <ellipse cx="1089" cy="500" rx="47" ry="18" fill="#90EE90" transform="rotate(30 1089 500)"/>
+    <ellipse cx="1089" cy="495" rx="42" ry="16" fill="#228B22" transform="rotate(-35 1089 495)"/>
+    <ellipse cx="1089" cy="490" rx="45" ry="17" fill="#32CD32" transform="rotate(50 1089 490)"/>
+  </g>
+  
+  <!-- Sandcastles -->
+  <g>
+    <!-- Large sandcastle -->
+    <rect x="200" y="650" width="80" height="60" fill="#DEB887"/>
+    <rect x="220" y="630" width="40" height="40" fill="#D2B48C"/>
+    <rect x="235" y="615" width="10" height="25" fill="#CD853F"/>
+    <!-- Castle details -->
+    <rect x="205" y="645" width="8" height="15" fill="#8B7355"/>
+    <rect x="217" y="645" width="8" height="15" fill="#8B7355"/>
+    <rect x="255" y="645" width="8" height="15" fill="#8B7355"/>
+    <rect x="267" y="645" width="8" height="15" fill="#8B7355"/>
+    <!-- Flag -->
+    <rect x="238" y="605" width="2" height="15" fill="#8B4513"/>
+    <polygon points="240,605 240,612 250,608" fill="#FF6B6B"/>
+    
+    <!-- Small sandcastle -->
+    <rect x="320" y="670" width="40" height="30" fill="#DEB887"/>
+    <rect x="330" y="660" width="20" height="20" fill="#D2B48C"/>
+    <rect x="337" y="655" width="6" height="10" fill="#CD853F"/>
+  </g>
+  
+  <!-- Seashells and starfish -->
+  <g>
+    <!-- Seashells -->
+    <ellipse cx="150" cy="720" rx="8" ry="12" fill="#FFB6C1" transform="rotate(25 150 720)"/>
+    <ellipse cx="400" cy="730" rx="6" ry="10" fill="#FFA07A" transform="rotate(-15 400 730)"/>
+    <ellipse cx="600" cy="725" rx="7" ry="11" fill="#F0E68C" transform="rotate(40 600 725)"/>
+    
+    <!-- Starfish -->
+    <g transform="translate(500,740)">
+      <polygon points="0,-10 3,-3 10,-3 5,2 7,9 0,5 -7,9 -5,2 -10,-3 -3,-3" fill="#FF7F50"/>
+      <circle cx="0" cy="0" r="3" fill="#FF6347"/>
+    </g>
+    
+    <g transform="translate(800,735)">
+      <polygon points="0,-8 2,-2 8,-2 4,1 5,7 0,4 -5,7 -4,1 -8,-2 -2,-2" fill="#FFB347"/>
+      <circle cx="0" cy="0" r="2" fill="#FF8C00"/>
+    </g>
+  </g>
+  
+  <!-- Beach ball -->
+  <g>
+    <circle cx="450" cy="680" r="25" fill="#FF6B6B"/>
+    <path d="M 425,680 A 25,25 0 0,1 475,680" fill="#FFD93D"/>
+    <path d="M 450,655 A 25,25 0 0,1 450,705" fill="#4ECDC4"/>
+    <path d="M 435,665 A 25,25 0 0,1 465,695" fill="#A55EEA"/>
+    <circle cx="450" cy="680" r="25" fill="none" stroke="white" stroke-width="2"/>
+  </g>
+  
+  <!-- Kites in the sky -->
+  <g>
+    <!-- Kite 1 -->
+    <polygon points="300,200 320,220 300,240 280,220" fill="#FF6B6B"/>
+    <polygon points="300,200 320,220 300,230 290,220" fill="#FF4757"/>
+    <polygon points="300,230 320,220 300,240 290,230" fill="#FFD93D"/>
+    <line x1="300" y1="240" x2="280" y2="320" stroke="#2C2C54" stroke-width="2"/>
+    <!-- Kite tail -->
+    <circle cx="275" cy="325" r="3" fill="#FF6B6B"/>
+    <circle cx="270" cy="335" r="3" fill="#FFD93D"/>
+    <circle cx="265" cy="345" r="3" fill="#4ECDC4"/>
+    
+    <!-- Kite 2 -->
+    <polygon points="600,150 625,175 600,200 575,175" fill="#4ECDC4"/>
+    <polygon points="600,150 625,175 600,175 587,175" fill="#26C6DA"/>
+    <polygon points="600,175 625,175 600,200 587,187" fill="#A55EEA"/>
+    <line x1="600" y1="200" x2="570" y2="290" stroke="#2C2C54" stroke-width="2"/>
+    <!-- Kite tail -->
+    <circle cx="565" cy="295" r="3" fill="#4ECDC4"/>
+    <circle cx="560" cy="305" r="3" fill="#A55EEA"/>
+    <circle cx="555" cy="315" r="3" fill="#FF6B6B"/>
+  </g>
+  
+  <!-- Kids playing -->
+  <!-- Kid 1 - building sandcastle (super excited) -->
+  <g>
+    <circle cx="250" cy="640" r="12" fill="#FDBCB4"/>
+    <!-- Big excited smile -->
+    <path d="M 242,645 Q 250,655 258,645" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Sparkling eyes -->
+    <circle cx="246" cy="638" r="2.5" fill="#000"/>
+    <circle cx="254" cy="638" r="2.5" fill="#000"/>
+    <circle cx="247" cy="637" r="1" fill="#FFF"/>
+    <circle cx="255" cy="637" r="1" fill="#FFF"/>
+    <!-- Sun-kissed cheeks -->
+    <circle cx="240" cy="642" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <circle cx="260" cy="642" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <rect x="245" y="652" width="10" height="15" fill="#FF1744"/>
+    <rect x="242" y="667" width="6" height="12" fill="#00E676"/>
+    <rect x="252" y="667" width="6" height="12" fill="#00E676"/>
+    <!-- Arms working on sandcastle -->
+    <rect x="235" y="645" width="6" height="12" fill="#FDBCB4" transform="rotate(-30 238 651)"/>
+    <rect x="259" y="645" width="6" height="12" fill="#FDBCB4" transform="rotate(30 262 651)"/>
+    <!-- Beach hat -->
+    <ellipse cx="250" cy="633" rx="16" ry="10" fill="#FF6B35"/>
+    <ellipse cx="250" cy="628" rx="12" ry="6" fill="#FFD93D"/>
+    <!-- Joy sparkles -->
+    <circle cx="235" cy="630" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="265" cy="630" r="2" fill="#FFE066" opacity="0.8"/>
+    <!-- Bucket -->
+    <rect x="265" y="670" width="12" height="15" fill="#FFD93D"/>
+    <rect x="267" y="668" width="8" height="2" fill="#FFC312"/>
+    <!-- Shovel -->
+    <rect x="235" y="675" width="3" height="10" fill="#8B4513"/>
+    <rect x="232" y="685" width="9" height="4" fill="#A0522D"/>
+  </g>
+  
+  <!-- Kid 2 - flying kite (absolutely thrilled) -->
+  <g>
+    <circle cx="320" cy="650" r="12" fill="#FDBCB4"/>
+    <!-- Huge joyful smile -->
+    <path d="M 312,655 Q 320,665 328,655" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Wide excited eyes looking up -->
+    <circle cx="316" cy="648" r="2.5" fill="#000"/>
+    <circle cx="324" cy="648" r="2.5" fill="#000"/>
+    <circle cx="317" cy="647" r="1" fill="#FFF"/>
+    <circle cx="325" cy="647" r="1" fill="#FFF"/>
+    <!-- Windswept rosy cheeks -->
+    <circle cx="310" cy="652" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="330" cy="652" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="315" y="662" width="10" height="15" fill="#2196F3"/>
+    <rect x="312" y="677" width="6" height="12" fill="#FF5722"/>
+    <rect x="322" y="677" width="6" height="12" fill="#FF5722"/>
+    <!-- One arm holding kite string, other pointing up -->
+    <rect x="305" y="655" width="6" height="15" fill="#FDBCB4" transform="rotate(-60 308 662)"/>
+    <rect x="329" y="655" width="6" height="15" fill="#FDBCB4" transform="rotate(45 332 662)"/>
+    <!-- Flowing beach hair -->
+    <ellipse cx="320" cy="643" rx="16" ry="10" fill="#FFC107"/>
+    <ellipse cx="315" cy="638" rx="8" ry="6" fill="#FFD54F"/>
+    <ellipse cx="325" cy="638" rx="8" ry="6" fill="#FFD54F"/>
+    <!-- Wind motion lines -->
+    <line x1="295" y1="645" x2="305" y2="645" stroke="#4ECDC4" stroke-width="2" opacity="0.7"/>
+    <line x1="298" y1="655" x2="308" y2="655" stroke="#4ECDC4" stroke-width="2" opacity="0.7"/>
+    <!-- Kite string in hand -->
+    <line x1="330" y1="665" x2="300" y2="240" stroke="#2C2C54" stroke-width="1"/>
+  </g>
+  
+  <!-- Kid 3 - playing with beach ball (giggling with delight) -->
+  <g>
+    <circle cx="480" cy="650" r="12" fill="#FDBCB4"/>
+    <!-- Giggling open mouth -->
+    <ellipse cx="480" cy="655" rx="3" ry="2" fill="#000"/>
+    <path d="M 474,653 Q 480,660 486,653" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Squinting happy eyes -->
+    <path d="M 474,648 Q 476,646 478,648" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 482,648 Q 484,646 486,648" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Joyful dimples -->
+    <circle cx="472" cy="652" r="2" fill="#FFB6C1" opacity="0.7"/>
+    <circle cx="488" cy="652" r="2" fill="#FFB6C1" opacity="0.7"/>
+    <rect x="475" y="662" width="10" height="15" fill="#9C27B0"/>
+    <rect x="472" y="677" width="6" height="12" fill="#FFEB3B"/>
+    <rect x="482" y="677" width="6" height="12" fill="#FFEB3B"/>
+    <!-- Arms reaching for ball -->
+    <rect x="465" y="655" width="6" height="12" fill="#FDBCB4" transform="rotate(-45 468 661)"/>
+    <rect x="489" y="655" width="6" height="12" fill="#FDBCB4" transform="rotate(45 492 661)"/>
+    <!-- Curly beach hair -->
+    <ellipse cx="480" cy="643" rx="16" ry="10" fill="#8D6E63"/>
+    <circle cx="470" cy="638" r="5" fill="#A1887F"/>
+    <circle cx="490" cy="638" r="5" fill="#A1887F"/>
+    <circle cx="480" cy="635" r="4" fill="#A1887F"/>
+  </g>
+  
+  <!-- Kid 4 - collecting shells (amazed and delighted) -->
+  <g>
+    <circle cx="580" cy="660" r="12" fill="#FDBCB4"/>
+    <!-- Amazed 'O' mouth -->
+    <circle cx="580" cy="665" r="2" fill="#000"/>
+    <!-- Wide wonder-filled eyes -->
+    <circle cx="576" cy="658" r="3" fill="#000"/>
+    <circle cx="584" cy="658" r="3" fill="#000"/>
+    <circle cx="577" cy="657" r="1.5" fill="#FFF"/>
+    <circle cx="585" cy="657" r="1.5" fill="#FFF"/>
+    <!-- Excited blush -->
+    <circle cx="570" cy="662" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <circle cx="590" cy="662" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <rect x="575" y="672" width="10" height="15" fill="#E91E63"/>
+    <rect x="572" y="687" width="6" height="12" fill="#673AB7"/>
+    <rect x="582" y="687" width="6" height="12" fill="#673AB7"/>
+    <!-- One arm reaching down, other holding bucket -->
+    <rect x="565" y="665" width="6" height="12" fill="#FDBCB4" transform="rotate(-60 568 671)"/>
+    <rect x="589" y="665" width="6" height="12" fill="#FDBCB4" transform="rotate(30 592 671)"/>
+    <!-- Braided beach hair -->
+    <ellipse cx="580" cy="653" rx="16" ry="10" fill="#3F51B5"/>
+    <rect x="570" y="648" width="4" height="15" fill="#5C6BC0"/>
+    <rect x="586" y="648" width="4" height="15" fill="#5C6BC0"/>
+    <!-- Discovery sparkles -->
+    <circle cx="565" cy="645" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="595" cy="645" r="2" fill="#FFE066" opacity="0.8"/>
+    <!-- Shell basket -->
+    <ellipse cx="595" cy="685" rx="8" ry="6" fill="#8B4513"/>
+    <ellipse cx="593" cy="682" rx="3" ry="2" fill="#FFB6C1"/>
+    <ellipse cx="597" cy="683" rx="2" ry="1" fill="#FFA07A"/>
+  </g>
+  
+  <!-- Kid 5 - running on beach (pure joy and freedom) -->
+  <g>
+    <circle cx="750" cy="655" r="12" fill="#FDBCB4"/>
+    <!-- Laughing with pure joy -->
+    <path d="M 742,660 Q 750,670 758,660" stroke="#000" stroke-width="2" fill="none"/>
+    <ellipse cx="750" cy="663" rx="4" ry="2" fill="#000"/>
+    <!-- Eyes squinting from laughter -->
+    <path d="M 744,653 Q 746,651 748,653" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 752,653 Q 754,651 756,653" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Wind-blown rosy cheeks -->
+    <circle cx="740" cy="657" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="760" cy="657" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="745" y="667" width="10" height="15" fill="#FF1744"/>
+    <rect x="742" y="682" width="6" height="12" fill="#00E5FF"/>
+    <rect x="752" y="680" width="6" height="14" fill="#00E5FF"/>
+    <!-- Arms pumping with running motion -->
+    <rect x="735" y="660" width="6" height="12" fill="#FDBCB4" transform="rotate(-45 738 666)"/>
+    <rect x="759" y="658" width="6" height="12" fill="#FDBCB4" transform="rotate(60 762 664)"/>
+    <!-- Flowing hair in wind -->
+    <ellipse cx="750" cy="648" rx="18" ry="12" fill="#E91E63"/>
+    <ellipse cx="745" cy="643" rx="10" ry="8" fill="#F06292"/>
+    <ellipse cx="755" cy="643" rx="10" ry="8" fill="#F06292"/>
+    <!-- Speed and joy lines -->
+    <line x1="720" y1="650" x2="730" y2="650" stroke="#FFE066" stroke-width="2" opacity="0.7"/>
+    <line x1="718" y1="660" x2="728" y2="660" stroke="#FFE066" stroke-width="2" opacity="0.7"/>
+    <line x1="715" y1="670" x2="725" y2="670" stroke="#FFE066" stroke-width="2" opacity="0.7"/>
+  </g>
+  
+  <!-- Seagulls -->
+  <g stroke="#2C2C54" stroke-width="2" fill="none">
+    <path d="M 200 120 Q 210 115 220 120" />
+    <path d="M 210 115 Q 220 110 230 115" />
+    
+    <path d="M 500 100 Q 510 95 520 100" />
+    <path d="M 510 95 Q 520 90 530 95" />
+    
+    <path d="M 800 130 Q 810 125 820 130" />
+    <path d="M 810 125 Q 820 120 830 125" />
+  </g>
+  
+  <!-- Beach umbrellas -->
+  <g>
+    <!-- Umbrella 1 -->
+    <rect x="899" y="620" width="4" height="60" fill="#8B4513"/>
+    <ellipse cx="901" cy="610" rx="40" ry="15" fill="#FF6B6B"/>
+    <ellipse cx="901" cy="608" rx="40" ry="15" fill="#FFD93D" opacity="0.7"/>
+    
+    <!-- Umbrella 2 -->
+    <rect x="1149" y="630" width="4" height="50" fill="#8B4513"/>
+    <ellipse cx="1151" cy="620" rx="35" ry="12" fill="#4ECDC4"/>
+    <ellipse cx="1151" cy="618" rx="35" ry="12" fill="#A55EEA" opacity="0.7"/>
+  </g>
+  
+  <!-- Footprints in sand -->
+  <g fill="#CD853F" opacity="0.6">
+    <ellipse cx="350" cy="710" rx="4" ry="8" transform="rotate(15 350 710)"/>
+    <ellipse cx="360" cy="715" rx="4" ry="8" transform="rotate(15 360 715)"/>
+    <ellipse cx="370" cy="720" rx="4" ry="8" transform="rotate(15 370 720)"/>
+    <ellipse cx="380" cy="725" rx="4" ry="8" transform="rotate(15 380 725)"/>
+    
+    <ellipse cx="650" cy="705" rx="4" ry="8" transform="rotate(-10 650 705)"/>
+    <ellipse cx="660" cy="710" rx="4" ry="8" transform="rotate(-10 660 710)"/>
+    <ellipse cx="670" cy="715" rx="4" ry="8" transform="rotate(-10 670 715)"/>
+  </g>
+</svg>

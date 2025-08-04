@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Fun Finder</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Comic+Neue:wght@400;700&family=Bubblegum+Sans&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* Fun colorful title */
+        .fun-title {
+            font-family: 'Fredoka One', cursive;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbow-text 3s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes rainbow-text {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Fun subtitle */
+        .fun-subtitle {
+            font-family: 'Bubblegum Sans', cursive;
+            color: #ff6b6b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            animation: bounce-text 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce-text {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+        
+        /* Colorful section headers */
+        .section-header {
+            font-family: 'Fredoka One', cursive;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Fun labels */
+        .fun-label {
+            font-family: 'Comic Neue', cursive;
+            color: #5f27cd;
+            font-weight: 700;
+        }
+        
+        /* Colorful buttons */
+        .fun-button {
+            font-family: 'Bubblegum Sans', cursive;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .fun-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+        }
+        
+        /* Activity cards with fun colors */
+        .activity-card {
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                       linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) border-box;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Fun activity titles */
+        .activity-title {
+            font-family: 'Fredoka One', cursive;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Colorful tags */
+        .fun-tag {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            color: #333;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Semi-transparent overlay for better text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Ensure content appears above the overlay */
+        body > * {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main container for the app -->
+    <div class="bg-white shadow-xl rounded-2xl w-full max-w-4xl p-8 lg:p-12 space-y-8">
+
+        <!-- Header -->
+        <header class="text-center">
+            <h1 class="text-4xl lg:text-5xl font-bold tracking-tight fun-title">
+                <span style="color: #ff6b6b;">K</span><span style="color: #4ecdc4;">i</span><span style="color: #45b7d1;">d</span><span style="color: #96ceb4;">s</span>
+                <span style="color: #feca57;"> </span>
+                <span style="color: #ff9ff3;">F</span><span style="color: #54a0ff;">u</span><span style="color: #5f27cd;">n</span>
+                <span style="color: #ff6b6b;"> </span>
+                <span style="color: #4ecdc4;">F</span><span style="color: #45b7d1;">i</span><span style="color: #96ceb4;">n</span><span style="color: #feca57;">d</span><span style="color: #ff9ff3;">e</span><span style="color: #54a0ff;">r</span>
+            </h1>
+            <p class="mt-2 text-lg fun-subtitle">Find the perfect activity for your family!</p>
+        </header>
+
+        <!-- Filter Form -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" class="p-6 rounded-xl">
+            <h2 class="text-xl font-semibold mb-4" style="color: white; font-family: 'Comic Neue', cursive; font-weight: 700;">Find Activities</h2>
+            <form id="filter-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div>
+                    <label for="zipCode" class="block text-sm font-medium mb-1" style="color: white; font-family: 'Comic Neue', cursive; font-weight: 700;">Zip Code</label>
+                    <input type="text" id="zipCode" name="zipCode" placeholder="Enter zip code" 
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label for="budget" class="block text-sm font-medium mb-1" style="color: white; font-family: 'Comic Neue', cursive; font-weight: 700;">Budget</label>
+                    <select id="budget" name="budget" 
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Any Budget</option>
+                        <option value="free">Free</option>
+                        <option value="low">Low ($)</option>
+                        <option value="medium">Medium ($$)</option>
+                        <option value="high">High ($$$)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="time" class="block text-sm font-medium mb-1" style="color: white; font-family: 'Comic Neue', cursive; font-weight: 700;">Time for Fun</label>
+                    <select id="time" name="time" 
+                        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="">Any Time</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                        <option value="all-day">All Day</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" id="handicapAccessible" name="handicapAccessible" 
+                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        <span class="text-sm font-medium" style="color: white; font-family: 'Comic Neue', cursive; font-weight: 700;">Handicap Accessible</span>
+                    </label>
+                </div>
+                <div class="col-span-full mt-4">
+                    <button type="submit" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-family: 'Comic Neue', cursive; font-weight: 700; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" class="hover:opacity-90">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Find Activities
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Activities Grid Container -->
+        <div id="activities-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Activities will be dynamically inserted here by JavaScript -->
+        </div>
+
+        <!-- Loading and Error messages -->
+        <div id="status-message" class="text-center text-gray-600 hidden">
+            <!-- Dynamic messages will be shown here -->
+        </div>
+        
+        <!-- Error message with instructions -->
+        <div id="error-message" class="hidden mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+            <strong>Connection Error:</strong> Could not connect to the backend server.<br>
+            <strong>Solutions:</strong><br>
+            1. Make sure the backend server is running on port 3001<br>
+            2. If testing this HTML file directly, run <code>start-html-server.bat</code> and access <code>http://localhost:8080/</code><br>
+            3. Or use the React app at <code>http://localhost:5173/</code>
+        </div>
+
+    </div>
+
+    <!-- JavaScript to fetch and display activities -->
+    <script>
+        // Use a function to fetch data from the backend with filters, handling CORS issues
+        function fetchActivities(filters = {}) {
+            // Get the container and status message elements
+            const activitiesContainer = document.getElementById('activities-container');
+            const statusMessage = document.getElementById('status-message');
+
+            // API endpoint URL, which should match the URL your backend is running on
+            let apiUrl = 'http://localhost:3001/api/places';
+
+            // Add query parameters if filters are provided
+            if (Object.keys(filters).length > 0) {
+                const params = new URLSearchParams();
+                
+                // Add each filter to the params if it has a value
+                if (filters.zipCode) params.append('zipCode', filters.zipCode);
+                if (filters.budget) params.append('budget', filters.budget);
+                if (filters.time) params.append('time', filters.time);
+                if (filters.handicapAccessible) params.append('handicapAccessible', 'true');
+                
+                // Append the query string to the URL
+                apiUrl += `?${params.toString()}`;
+            }
+
+            // Show a loading message while we wait for the data
+            statusMessage.textContent = 'Loading fun activities...';
+            statusMessage.classList.remove('hidden');
+
+            // Try direct fetch first (works if CORS is properly configured or served via HTTP server)
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('API Response:', data);
+                    // Handle both old array format and new object format
+                    let activities = [];
+                    let message = '';
+                    
+                    if (Array.isArray(data)) {
+                        // Old format - direct array
+                        activities = data;
+                        console.log('Using array format, activities:', activities);
+                    } else if (data.places) {
+                        // New format - object with places array
+                        activities = data.places;
+                        message = data.message || '';
+                        console.log('Using object format, activities:', activities, 'message:', message);
+                    }
+                    
+                    console.log('Final activities array length:', activities.length);
+                    
+                    // Clear any previous loading or error messages
+                    activitiesContainer.innerHTML = '';
+                    statusMessage.classList.add('hidden');
+
+                    // Check if there are any activities to display
+                    if (activities.length === 0) {
+                        statusMessage.textContent = message || 'No activities found. Try adjusting your filters!';
+                        statusMessage.classList.remove('hidden');
+                        return;
+                    }
+
+                // Loop through each activity and create an HTML card for it
+                console.log('About to loop through activities, count:', activities.length);
+                activities.forEach((activity, index) => {
+                    console.log(`Processing activity ${index + 1}:`, activity.name);
+                    // Create tags for additional information
+                    const tags = [];
+                    
+                    // Handle price from enhanced data
+                    if (activity.price && activity.price !== 'Price not available') {
+                        tags.push(`<span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">${activity.price}</span>`);
+                    }
+                    
+                    // Handle rating from enhanced data
+                    if (activity.rating && activity.rating > 0) {
+                        tags.push(`<span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">★ ${activity.rating.toFixed(1)}</span>`);
+                    }
+                    
+                    // Handle age range
+                    if (activity.ageRange) {
+                        tags.push(`<span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">${activity.ageRange}</span>`);
+                    }
+                    
+                    // Handle place types
+                    if (activity.types && activity.types.length > 0) {
+                        const mainType = activity.types[0].replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        tags.push(`<span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">${mainType}</span>`);
+                    }
+                    
+                    // Handle business status
+                    if (activity.openNow !== null) {
+                        const statusText = activity.openNow ? 'Open Now' : 'Closed';
+                        const statusColor = activity.openNow ? 'green' : 'red';
+                        tags.push(`<span class="inline-block bg-${statusColor}-100 text-${statusColor}-800 text-xs px-2 py-1 rounded-full mr-2 mb-2">${statusText}</span>`);
+                    }
+
+                    // Get comprehensive information
+                    const name = activity.name || 'Unnamed Place';
+                    const description = activity.description || 'Family-friendly activity';
+                    const address = activity.address || 'Address not available';
+                    const phone = activity.phone || 'Phone not available';
+                    const website = activity.website || null;
+                    const hours = activity.hours || 'Hours not available';
+                    const distance = activity.distance ? `${activity.distance.toFixed(1)} miles away` : '';
+
+                    const activityCard = `
+                        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-2xl font-semibold text-gray-900 flex-1">${name}</h3>
+                                ${distance ? `<span class="text-sm text-gray-500 ml-2">${distance}</span>` : ''}
+                            </div>
+                            <p class="mt-2 text-gray-600">${description}</p>
+                            <div class="mt-3 flex flex-wrap">
+                                ${tags.join('')}
+                            </div>
+                            
+                            <!-- Contact Information -->
+                            <div class="mt-4 space-y-2">
+                                <div class="flex items-start text-sm text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-500 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="break-words">${address}</span>
+                                </div>
+                                
+                                ${phone !== 'Phone not available' ? `
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                    </svg>
+                                    <a href="tel:${phone}" class="text-indigo-600 hover:text-indigo-800">${phone}</a>
+                                </div>` : ''}
+                                
+                                ${website && website !== 'Website not available' ? `
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+                                    </svg>
+                                    <a href="${website}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 truncate">Visit Website</a>
+                                </div>` : ''}
+                                
+                                ${hours !== 'Hours not available' ? `
+                                <div class="flex items-start text-sm text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-500 mt-0.5 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-xs leading-relaxed">${hours.length > 100 ? hours.substring(0, 100) + '...' : hours}</span>
+                                </div>` : ''}
+                            </div>
+                        </div>
+                    `;
+                    // Add the created card to the container
+                    console.log(`Adding card for activity ${index + 1}:`, name);
+                    activitiesContainer.innerHTML += activityCard;
+                    console.log('Current container innerHTML length:', activitiesContainer.innerHTML.length);
+                });
+
+                })
+                .catch(error => {
+                    // Handle any errors that occurred during the fetch
+                    console.error('Failed to fetch activities:', error);
+                    activitiesContainer.innerHTML = '';
+                    
+                    // Provide helpful error message based on the type of error
+                    let errorMessage = 'Sorry, could not connect to the backend.';
+                    if (error.message.includes('CORS') || error.message.includes('fetch')) {
+                        errorMessage += ' This might be a CORS issue. Try serving this HTML file through a local HTTP server instead of opening it directly in the browser.';
+                    }
+                    errorMessage += ` Please ensure the server is running on http://localhost:3001. Error: ${error.message}`;
+                    
+                    statusMessage.textContent = errorMessage;
+                    statusMessage.classList.remove('hidden');
+                });
+        }
+        
+        // Function to handle form submission
+        function handleFilterSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const zipCode = document.getElementById('zipCode').value.trim();
+            const budget = document.getElementById('budget').value;
+            const time = document.getElementById('time').value.trim();
+            const handicapAccessible = document.getElementById('handicapAccessible').checked;
+            
+            // Create filters object
+            const filters = {};
+            if (zipCode) filters.zipCode = zipCode;
+            if (budget) filters.budget = budget; // Budget values are already lowercase
+            if (time) filters.time = time.toLowerCase(); // Convert to lowercase to match data
+            if (handicapAccessible) filters.handicapAccessible = true;
+            
+            // Fetch activities with the filters
+            fetchActivities(filters);
+        }
+        
+        // Dynamic background functionality
+          const backgroundImages = [
+              './kids-fun-finder-frontend/public/background-example-1.svg',
+              './kids-fun-finder-frontend/public/background-example-2.svg',
+              './kids-fun-finder-frontend/public/background-example-3.svg'
+          ];
+         
+         // Function to randomly select a background
+         function selectRandomBackground() {
+             const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+             const selectedBackground = backgroundImages[randomIndex];
+             document.body.style.backgroundImage = `url('${selectedBackground}')`;
+         }
+         
+         // Enhanced fetch function that also changes background
+         async function fetchActivitiesWithBackground(filters = {}) {
+             // Select a new random background when fetching activities
+             selectRandomBackground();
+             
+             // Call the original fetch function
+             await fetchActivities(filters);
+         }
+         
+         // Enhanced form submission handler
+         function handleFilterSubmitWithBackground(event) {
+             event.preventDefault();
+             
+             // Get form values
+             const zipCode = document.getElementById('zipCode').value.trim();
+             const budget = document.getElementById('budget').value;
+             const time = document.getElementById('time').value.trim();
+             const handicapAccessible = document.getElementById('handicapAccessible').checked;
+             
+             // Create filters object
+             const filters = {};
+             if (zipCode) filters.zipCode = zipCode;
+             if (budget) filters.budget = budget;
+             if (time) filters.time = time.toLowerCase();
+             if (handicapAccessible) filters.handicapAccessible = true;
+             
+             // Fetch activities with background change
+             fetchActivitiesWithBackground(filters);
+         }
+         
+         // Set up event listeners when the page loads
+         window.onload = function() {
+             // Select initial random background
+             selectRandomBackground();
+             
+             // Initial fetch without filters
+             fetchActivities();
+             
+             // Add event listener for form submission with background change
+             const filterForm = document.getElementById('filter-form');
+             filterForm.addEventListener('submit', handleFilterSubmitWithBackground);
+         };
+    </script>
+</body>
+</html>

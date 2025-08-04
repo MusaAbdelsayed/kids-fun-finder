@@ -1,0 +1,496 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Urban sky gradient -->
+  <defs>
+    <linearGradient id="urbanSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#95A5A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7F8C8D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C0392B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980B9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F39C12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E67E22;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="1200" height="500" fill="url(#urbanSkyGradient)"/>
+  
+  <!-- Ground/pavement -->
+  <rect x="0" y="500" width="1200" height="300" fill="url(#groundGradient)"/>
+  
+  <!-- City buildings in background -->
+  <g>
+    <!-- Building 1 -->
+    <rect x="50" y="200" width="80" height="300" fill="url(#buildingGradient1)"/>
+    <rect x="60" y="220" width="12" height="15" fill="#FFD93D"/>
+    <rect x="80" y="220" width="12" height="15" fill="#FFD93D"/>
+    <rect x="100" y="220" width="12" height="15" fill="#FFD93D"/>
+    <rect x="60" y="250" width="12" height="15" fill="#FFD93D"/>
+    <rect x="100" y="250" width="12" height="15" fill="#FFD93D"/>
+    <rect x="60" y="280" width="12" height="15" fill="#FFD93D"/>
+    <rect x="80" y="280" width="12" height="15" fill="#FFD93D"/>
+    <rect x="100" y="280" width="12" height="15" fill="#FFD93D"/>
+    
+    <!-- Building 2 -->
+    <rect x="150" y="150" width="100" height="350" fill="url(#buildingGradient2)"/>
+    <rect x="165" y="170" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="185" y="170" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="205" y="170" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="225" y="170" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="165" y="210" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="185" y="210" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="205" y="210" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="225" y="210" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="165" y="250" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="205" y="250" width="15" height="20" fill="#E8F4FD"/>
+    <rect x="225" y="250" width="15" height="20" fill="#E8F4FD"/>
+    
+    <!-- Building 3 -->
+    <rect x="1050" y="180" width="90" height="320" fill="url(#buildingGradient3)"/>
+    <rect x="1065" y="200" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1085" y="200" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1105" y="200" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1125" y="200" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1065" y="230" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1085" y="230" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1105" y="230" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1125" y="230" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1065" y="260" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1105" y="260" width="12" height="15" fill="#FFF3E0"/>
+    <rect x="1125" y="260" width="12" height="15" fill="#FFF3E0"/>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="1000" cy="120" r="45" fill="url(#sunGradient)"/>
+  <g stroke="#FFD700" stroke-width="3" opacity="0.8">
+    <line x1="1000" y1="55" x2="1000" y2="40"/>
+    <line x1="1000" y1="200" x2="1000" y2="215"/>
+    <line x1="935" y1="120" x2="920" y2="120"/>
+    <line x1="1065" y1="120" x2="1080" y2="120"/>
+    <line x1="963" y1="88" x2="952" y2="77"/>
+    <line x1="1037" y1="152" x2="1048" y2="163"/>
+    <line x1="963" y1="152" x2="952" y2="163"/>
+    <line x1="1037" y1="88" x2="1048" y2="77"/>
+  </g>
+  
+  <!-- Clouds -->
+  <g fill="white" opacity="0.9">
+    <ellipse cx="300" cy="100" rx="40" ry="22"/>
+    <ellipse cx="330" cy="95" rx="35" ry="18"/>
+    <ellipse cx="270" cy="95" rx="30" ry="16"/>
+    
+    <ellipse cx="700" cy="80" rx="45" ry="25"/>
+    <ellipse cx="735" cy="75" rx="38" ry="20"/>
+    <ellipse cx="665" cy="75" rx="32" ry="18"/>
+  </g>
+  
+  <!-- Urban trees -->
+  <g>
+    <!-- Tree 1 -->
+    <rect x="295" y="450" width="15" height="50" fill="#8B4513"/>
+    <circle cx="302" cy="440" r="30" fill="#228B22"/>
+    <circle cx="285" cy="425" r="20" fill="#32CD32"/>
+    <circle cx="319" cy="425" r="20" fill="#32CD32"/>
+    <circle cx="302" cy="415" r="18" fill="#90EE90"/>
+    
+    <!-- Tree 2 -->
+    <rect x="895" y="460" width="12" height="40" fill="#8B4513"/>
+    <circle cx="901" cy="450" r="25" fill="#228B22"/>
+    <circle cx="885" cy="438" r="18" fill="#32CD32"/>
+    <circle cx="917" cy="438" r="18" fill="#32CD32"/>
+  </g>
+  
+  <!-- Playground equipment -->
+  <!-- Jungle gym -->
+  <g>
+    <!-- Frame -->
+    <rect x="400" y="400" width="8" height="100" fill="#E74C3C"/>
+    <rect x="480" y="400" width="8" height="100" fill="#E74C3C"/>
+    <rect x="560" y="400" width="8" height="100" fill="#E74C3C"/>
+    <rect x="400" y="400" width="168" height="8" fill="#E74C3C"/>
+    <rect x="400" y="450" width="168" height="8" fill="#E74C3C"/>
+    
+    <!-- Climbing bars -->
+    <rect x="420" y="408" width="6" height="42" fill="#3498DB"/>
+    <rect x="440" y="408" width="6" height="42" fill="#3498DB"/>
+    <rect x="460" y="408" width="6" height="42" fill="#3498DB"/>
+    <rect x="500" y="408" width="6" height="42" fill="#3498DB"/>
+    <rect x="520" y="408" width="6" height="42" fill="#3498DB"/>
+    <rect x="540" y="408" width="6" height="42" fill="#3498DB"/>
+    
+    <!-- Monkey bars -->
+    <rect x="408" y="420" width="152" height="6" fill="#F39C12"/>
+    <rect x="415" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="430" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="445" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="460" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="475" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="490" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="505" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="520" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="535" y="418" width="4" height="10" fill="#E67E22"/>
+    <rect x="550" y="418" width="4" height="10" fill="#E67E22"/>
+  </g>
+  
+  <!-- Colorful slide -->
+  <g>
+    <rect x="600" y="420" width="100" height="80" fill="#9B59B6" rx="15"/>
+    <rect x="610" y="410" width="80" height="10" fill="#8E44AD"/>
+    <rect x="695" y="440" width="15" height="60" fill="#E74C3C"/>
+    <rect x="705" y="460" width="15" height="40" fill="#E74C3C"/>
+    <rect x="715" y="480" width="15" height="20" fill="#E74C3C"/>
+    <!-- Ladder -->
+    <rect x="585" y="420" width="8" height="80" fill="#3498DB"/>
+    <rect x="588" y="435" width="12" height="4" fill="#3498DB"/>
+    <rect x="588" y="450" width="12" height="4" fill="#3498DB"/>
+    <rect x="588" y="465" width="12" height="4" fill="#3498DB"/>
+    <rect x="588" y="480" width="12" height="4" fill="#3498DB"/>
+  </g>
+  
+  <!-- Seesaw -->
+  <g>
+    <rect x="750" y="485" width="10" height="15" fill="#E74C3C"/>
+    <rect x="720" y="492" width="70" height="8" fill="#F39C12"/>
+    <circle cx="725" cy="488" r="10" fill="#FF6B6B"/>
+    <circle cx="785" cy="496" r="10" fill="#4ECDC4"/>
+  </g>
+  
+  <!-- Hopscotch court -->
+  <g stroke="#FFD93D" stroke-width="3" fill="none">
+    <rect x="320" y="520" width="30" height="30"/>
+    <rect x="320" y="550" width="30" height="30"/>
+    <rect x="320" y="580" width="30" height="30"/>
+    <rect x="305" y="610" width="30" height="30"/>
+    <rect x="335" y="610" width="30" height="30"/>
+    <rect x="320" y="640" width="30" height="30"/>
+    <rect x="320" y="670" width="30" height="30"/>
+    <!-- Numbers -->
+    <text x="335" y="540" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">1</text>
+    <text x="335" y="570" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">2</text>
+    <text x="335" y="600" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">3</text>
+    <text x="320" y="630" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">4</text>
+    <text x="350" y="630" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">5</text>
+    <text x="335" y="660" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">6</text>
+    <text x="335" y="690" font-family="Arial" font-size="16" fill="#FFD93D" text-anchor="middle">7</text>
+  </g>
+  
+  <!-- Basketball hoop -->
+  <g>
+    <rect x="850" y="350" width="8" height="150" fill="#8B4513"/>
+    <rect x="858" y="350" width="40" height="8" fill="#8B4513"/>
+    <circle cx="878" cy="358" r="20" fill="none" stroke="#FF6B6B" stroke-width="4"/>
+    <path d="M 858,358 Q 878,375 898,358" stroke="#FF6B6B" stroke-width="2" fill="none"/>
+    <path d="M 863,358 Q 878,370 893,358" stroke="#FF6B6B" stroke-width="2" fill="none"/>
+    <path d="M 868,358 Q 878,365 888,358" stroke="#FF6B6B" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Kids playing -->
+  <!-- Kid 1 - on monkey bars (determined and excited) -->
+  <g>
+    <circle cx="450" cy="405" r="12" fill="#FDBCB4"/>
+    <!-- Determined smile with effort -->
+    <path d="M 444,410 Q 450,417 456,410" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Focused eyes -->
+    <circle cx="446" cy="403" r="2.5" fill="#000"/>
+    <circle cx="454" cy="403" r="2.5" fill="#000"/>
+    <circle cx="447" cy="402" r="1" fill="#FFF"/>
+    <circle cx="455" cy="402" r="1" fill="#FFF"/>
+    <!-- Effort blush -->
+    <circle cx="440" cy="407" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <circle cx="460" cy="407" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <rect x="445" y="417" width="10" height="15" fill="#FF1744"/>
+    <rect x="442" y="432" width="6" height="12" fill="#00E676"/>
+    <rect x="452" y="432" width="6" height="12" fill="#00E676"/>
+    <!-- Strong arms gripping bars -->
+    <rect x="430" y="405" width="8" height="15" fill="#FDBCB4" transform="rotate(-15 434 412)"/>
+    <rect x="462" y="405" width="8" height="15" fill="#FDBCB4" transform="rotate(15 466 412)"/>
+    <!-- Athletic hair with headband -->
+    <ellipse cx="450" cy="398" rx="16" ry="10" fill="#8B4513"/>
+    <rect x="435" y="395" width="30" height="3" fill="#FF6B35"/>
+    <!-- Strength sparkles -->
+    <circle cx="430" cy="390" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="470" cy="390" r="2" fill="#FFE066" opacity="0.8"/>
+  </g>
+  
+  <!-- Kid 2 - climbing jungle gym (adventurous and thrilled) -->
+  <g>
+    <circle cx="520" cy="430" r="12" fill="#FDBCB4"/>
+    <!-- Adventurous grin -->
+    <path d="M 514,435 Q 520,442 526,435" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Bright adventurous eyes -->
+    <circle cx="516" cy="428" r="2.5" fill="#000"/>
+    <circle cx="524" cy="428" r="2.5" fill="#000"/>
+    <circle cx="517" cy="427" r="1" fill="#FFF"/>
+    <circle cx="525" cy="427" r="1" fill="#FFF"/>
+    <!-- Excitement flush -->
+    <circle cx="510" cy="432" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="530" cy="432" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="515" y="442" width="10" height="15" fill="#2196F3"/>
+    <rect x="512" y="457" width="6" height="12" fill="#FF5722"/>
+    <rect x="522" y="457" width="6" height="12" fill="#FF5722"/>
+    <!-- Climbing arms -->
+    <rect x="505" y="430" width="6" height="12" fill="#FDBCB4" transform="rotate(-30 508 436)"/>
+    <rect x="529" y="428" width="6" height="12" fill="#FDBCB4" transform="rotate(30 532 434)"/>
+    <!-- Windswept hair -->
+    <ellipse cx="520" cy="423" rx="16" ry="10" fill="#FFC107"/>
+    <ellipse cx="515" cy="418" rx="8" ry="6" fill="#FFD54F"/>
+    <ellipse cx="525" cy="418" rx="8" ry="6" fill="#FFD54F"/>
+    <!-- Adventure sparkles -->
+    <circle cx="500" cy="415" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="540" cy="415" r="2" fill="#FFE066" opacity="0.8"/>
+  </g>
+  
+  <!-- Kid 3 - going down slide (pure exhilaration) -->
+  <g>
+    <circle cx="680" cy="440" r="12" fill="#FDBCB4"/>
+    <!-- Screaming with joy -->
+    <ellipse cx="680" cy="445" rx="3" ry="4" fill="#000"/>
+    <path d="M 674,442 Q 680,450 686,442" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Eyes wide with excitement -->
+    <circle cx="676" cy="438" r="3" fill="#000"/>
+    <circle cx="684" cy="438" r="3" fill="#000"/>
+    <circle cx="677" cy="437" r="1.5" fill="#FFF"/>
+    <circle cx="685" cy="437" r="1.5" fill="#FFF"/>
+    <!-- Wind-blown cheeks -->
+    <circle cx="670" cy="442" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <circle cx="690" cy="442" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <rect x="675" y="452" width="10" height="15" fill="#9C27B0"/>
+    <rect x="672" y="467" width="6" height="12" fill="#FFEB3B"/>
+    <rect x="682" y="467" width="6" height="12" fill="#FFEB3B"/>
+    <!-- Arms up in excitement -->
+    <rect x="665" y="445" width="6" height="12" fill="#FDBCB4" transform="rotate(-60 668 451)"/>
+    <rect x="689" y="445" width="6" height="12" fill="#FDBCB4" transform="rotate(60 692 451)"/>
+    <!-- Flying hair -->
+    <ellipse cx="680" cy="433" rx="18" ry="12" fill="#8D6E63"/>
+    <ellipse cx="675" cy="428" rx="10" ry="8" fill="#A1887F"/>
+    <ellipse cx="685" cy="428" rx="10" ry="8" fill="#A1887F"/>
+    <!-- Speed lines -->
+    <line x1="650" y1="435" x2="665" y2="435" stroke="#FFE066" stroke-width="2" opacity="0.7"/>
+    <line x1="655" y1="445" x2="670" y2="445" stroke="#FFE066" stroke-width="2" opacity="0.7"/>
+  </g>
+  
+  <!-- Kid 4 - on seesaw (laughing with glee) -->
+  <g>
+    <circle cx="725" cy="475" r="10" fill="#FDBCB4"/>
+    <!-- Laughing mouth -->
+    <path d="M 719,480 Q 725,488 731,480" stroke="#000" stroke-width="2" fill="none"/>
+    <ellipse cx="725" cy="482" rx="3" ry="2" fill="#000"/>
+    <!-- Squinting from laughter -->
+    <path d="M 720,473 Q 722,471 724,473" stroke="#000" stroke-width="2" fill="none"/>
+    <path d="M 726,473 Q 728,471 730,473" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Happy tears -->
+    <circle cx="718" cy="475" r="1" fill="#4ECDC4" opacity="0.8"/>
+    <circle cx="732" cy="475" r="1" fill="#4ECDC4" opacity="0.8"/>
+    <!-- Joyful blush -->
+    <circle cx="716" cy="477" r="2.5" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="734" cy="477" r="2.5" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="721" y="485" width="8" height="12" fill="#E91E63"/>
+    <rect x="719" y="497" width="5" height="10" fill="#673AB7"/>
+    <rect x="726" y="497" width="5" height="10" fill="#673AB7"/>
+    <!-- Arms holding tight -->
+    <rect x="713" y="480" width="5" height="10" fill="#FDBCB4" transform="rotate(-45 715 485)"/>
+    <rect x="732" y="480" width="5" height="10" fill="#FDBCB4" transform="rotate(45 734 485)"/>
+    <!-- Bouncy pigtails -->
+    <ellipse cx="725" cy="469" rx="14" ry="8" fill="#3F51B5"/>
+    <circle cx="712" cy="465" r="5" fill="#5C6BC0"/>
+    <circle cx="738" cy="465" r="5" fill="#5C6BC0"/>
+    <rect x="710" y="463" width="4" height="2" fill="#FF6B35"/>
+    <rect x="736" y="463" width="4" height="2" fill="#FF6B35"/>
+  </g>
+  
+  <!-- Kid 5 - on other side of seesaw (giggling with delight) -->
+  <g>
+    <circle cx="785" cy="483" r="10" fill="#FDBCB4"/>
+    <!-- Giggling smile -->
+    <path d="M 779,488 Q 785,495 791,488" stroke="#000" stroke-width="2" fill="none"/>
+    <ellipse cx="785" cy="490" rx="2.5" ry="1.5" fill="#000"/>
+    <!-- Bright happy eyes -->
+    <circle cx="781" cy="481" r="2" fill="#000"/>
+    <circle cx="789" cy="481" r="2" fill="#000"/>
+    <circle cx="782" cy="480" r="0.8" fill="#FFF"/>
+    <circle cx="790" cy="480" r="0.8" fill="#FFF"/>
+    <!-- Delighted blush -->
+    <circle cx="776" cy="485" r="2.5" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="794" cy="485" r="2.5" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="781" y="493" width="8" height="12" fill="#FFEB3B"/>
+    <rect x="779" y="505" width="5" height="10" fill="#673AB7"/>
+    <rect x="786" y="505" width="5" height="10" fill="#673AB7"/>
+    <!-- Balancing arms -->
+    <rect x="773" y="488" width="5" height="8" fill="#FDBCB4" transform="rotate(-30 775 492)"/>
+    <rect x="792" y="488" width="5" height="8" fill="#FDBCB4" transform="rotate(30 794 492)"/>
+    <!-- Curly hair with bow -->
+    <ellipse cx="785" cy="477" rx="14" ry="8" fill="#E91E63"/>
+    <ellipse cx="780" cy="472" rx="6" ry="4" fill="#F06292"/>
+    <ellipse cx="790" cy="472" rx="6" ry="4" fill="#F06292"/>
+    <rect x="782" y="470" width="6" height="3" fill="#FF6B35"/>
+    <!-- Joy sparkles -->
+    <circle cx="770" cy="470" r="1.5" fill="#FFE066" opacity="0.8"/>
+    <circle cx="800" cy="470" r="1.5" fill="#FFE066" opacity="0.8"/>
+  </g>
+  
+  <!-- Kid 6 - playing hopscotch (concentrated joy) -->
+  <g>
+    <circle cx="335" cy="560" r="12" fill="#FDBCB4"/>
+    <!-- Focused smile -->
+    <path d="M 329,565 Q 335,572 341,565" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Determined eyes -->
+    <circle cx="331" cy="558" r="2.5" fill="#000"/>
+    <circle cx="339" cy="558" r="2.5" fill="#000"/>
+    <circle cx="332" cy="557" r="1" fill="#FFF"/>
+    <circle cx="340" cy="557" r="1" fill="#FFF"/>
+    <!-- Concentration blush -->
+    <circle cx="325" cy="562" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <circle cx="345" cy="562" r="3" fill="#FFB6C1" opacity="0.8"/>
+    <rect x="330" y="572" width="10" height="15" fill="#FF1744"/>
+    <rect x="327" y="587" width="6" height="12" fill="#00E5FF"/>
+    <rect x="337" y="585" width="6" height="14" fill="#00E5FF"/>
+    <!-- Balancing arms -->
+    <rect x="320" y="565" width="6" height="12" fill="#FDBCB4" transform="rotate(-30 323 571)"/>
+    <rect x="344" y="563" width="6" height="12" fill="#FDBCB4" transform="rotate(30 347 569)"/>
+    <!-- Sporty ponytail -->
+    <ellipse cx="335" cy="553" rx="16" ry="10" fill="#8B4513"/>
+    <ellipse cx="350" cy="550" rx="8" ry="12" fill="#A0522D"/>
+    <rect x="347" y="545" width="3" height="2" fill="#FF6B35"/>
+    <!-- Focus sparkles -->
+    <circle cx="315" cy="545" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="355" cy="545" r="2" fill="#FFE066" opacity="0.8"/>
+  </g>
+  
+  <!-- Kid 7 - shooting basketball (intense focus and joy) -->
+  <g>
+    <circle cx="820" cy="460" r="12" fill="#FDBCB4"/>
+    <!-- Determined game face -->
+    <path d="M 814,465 Q 820,470 826,465" stroke="#000" stroke-width="2" fill="none"/>
+    <!-- Focused athlete eyes -->
+    <circle cx="816" cy="458" r="2.5" fill="#000"/>
+    <circle cx="824" cy="458" r="2.5" fill="#000"/>
+    <circle cx="817" cy="457" r="1" fill="#FFF"/>
+    <circle cx="825" cy="457" r="1" fill="#FFF"/>
+    <!-- Game intensity blush -->
+    <circle cx="810" cy="462" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <circle cx="830" cy="462" r="3" fill="#FF6B9D" opacity="0.8"/>
+    <rect x="815" y="472" width="10" height="15" fill="#FF9800"/>
+    <rect x="812" y="487" width="6" height="12" fill="#673AB7"/>
+    <rect x="822" y="487" width="6" height="12" fill="#673AB7"/>
+    <!-- Shooting form arms -->
+    <rect x="805" y="460" width="6" height="15" fill="#FDBCB4" transform="rotate(-45 808 467)"/>
+    <rect x="829" y="455" width="6" height="20" fill="#FDBCB4" transform="rotate(60 832 465)"/>
+    <!-- Athletic hair with sweatband -->
+    <ellipse cx="820" cy="453" rx="16" ry="10" fill="#FFD700"/>
+    <rect x="805" y="450" width="30" height="3" fill="#4CAF50"/>
+    <!-- Champion sparkles -->
+    <circle cx="795" cy="445" r="2" fill="#FFE066" opacity="0.8"/>
+    <circle cx="845" cy="445" r="2" fill="#FFE066" opacity="0.8"/>
+    <!-- Basketball -->
+    <circle cx="840" cy="420" r="8" fill="#FF8C00"/>
+    <path d="M 832,420 Q 840,415 848,420" stroke="#8B4513" stroke-width="1" fill="none"/>
+    <path d="M 840,412 Q 845,420 840,428" stroke="#8B4513" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Kid 8 - sitting and reading (content and peaceful joy) -->
+  <g>
+    <circle cx="1100" cy="560" r="12" fill="#FDBCB4"/>
+    <!-- Gentle content smile -->
+    <path d="M 1096,565 Q 1100,570 1104,565" stroke="#000" stroke-width="1.5" fill="none"/>
+    <!-- Peaceful reading eyes -->
+    <circle cx="1096" cy="558" r="2" fill="#000"/>
+    <circle cx="1104" cy="558" r="2" fill="#000"/>
+    <circle cx="1097" cy="557" r="0.8" fill="#FFF"/>
+    <circle cx="1105" cy="557" r="0.8" fill="#FFF"/>
+    <!-- Gentle blush -->
+    <circle cx="1090" cy="562" r="2.5" fill="#FFB6C1" opacity="0.6"/>
+    <circle cx="1110" cy="562" r="2.5" fill="#FFB6C1" opacity="0.6"/>
+    <rect x="1095" y="572" width="10" height="15" fill="#3F51B5"/>
+    <rect x="1092" y="587" width="6" height="12" fill="#FFEB3B"/>
+    <rect x="1102" y="587" width="6" height="12" fill="#FFEB3B"/>
+    <!-- Relaxed arms holding book -->
+    <rect x="1085" y="565" width="6" height="10" fill="#FDBCB4"/>
+    <rect x="1109" y="565" width="6" height="10" fill="#FDBCB4"/>
+    <!-- Neat hair with reading glasses -->
+    <ellipse cx="1100" cy="553" rx="16" ry="10" fill="#8D6E63"/>
+    <ellipse cx="1096" cy="558" rx="4" ry="3" fill="none" stroke="#2C2C54" stroke-width="1"/>
+    <ellipse cx="1104" cy="558" rx="4" ry="3" fill="none" stroke="#2C2C54" stroke-width="1"/>
+    <line x1="1100" y1="558" x2="1100" y2="560" stroke="#2C2C54" stroke-width="1"/>
+    <!-- Colorful storybook -->
+    <rect x="1085" y="565" width="12" height="8" fill="#E91E63"/>
+    <rect x="1087" y="567" width="8" height="4" fill="#FFD54F"/>
+    <!-- Peaceful sparkles -->
+    <circle cx="1075" cy="550" r="1.5" fill="#FFE066" opacity="0.6"/>
+    <circle cx="1125" cy="550" r="1.5" fill="#FFE066" opacity="0.6"/>
+  </g>
+  
+  <!-- Urban birds -->
+  <g stroke="#2C2C54" stroke-width="2" fill="none">
+    <path d="M 400 180 Q 410 175 420 180" />
+    <path d="M 410 175 Q 420 170 430 175" />
+    
+    <path d="M 600 160 Q 610 155 620 160" />
+    <path d="M 610 155 Q 620 150 630 155" />
+  </g>
+  
+  <!-- Street lamps -->
+  <g>
+    <!-- Lamp 1 -->
+    <rect x="270" y="350" width="6" height="150" fill="#34495E"/>
+    <circle cx="273" cy="345" r="12" fill="#F1C40F"/>
+    <circle cx="273" cy="345" r="8" fill="#FFD700" opacity="0.8"/>
+    
+    <!-- Lamp 2 -->
+    <rect x="920" y="370" width="6" height="130" fill="#34495E"/>
+    <circle cx="923" cy="365" r="12" fill="#F1C40F"/>
+    <circle cx="923" cy="365" r="8" fill="#FFD700" opacity="0.8"/>
+  </g>
+  
+  <!-- Colorful graffiti art on wall -->
+  <g>
+    <rect x="1150" y="300" width="50" height="200" fill="#BDC3C7"/>
+    <!-- Graffiti -->
+    <circle cx="1165" cy="350" r="8" fill="#E74C3C"/>
+    <circle cx="1180" cy="350" r="8" fill="#3498DB"/>
+    <rect x="1160" y="370" width="25" height="15" fill="#F39C12" rx="7"/>
+    <polygon points="1165,400 1175,390 1185,400 1175,410" fill="#9B59B6"/>
+    <path d="M 1160,420 Q 1175,430 1190,420" stroke="#2ECC71" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Pigeons on ground -->
+  <g>
+    <ellipse cx="380" cy="520" rx="6" ry="4" fill="#95A5A6"/>
+    <circle cx="375" cy="518" r="3" fill="#7F8C8D"/>
+    <polygon points="372,518 370,516 370,520" fill="#F39C12"/>
+    
+    <ellipse cx="450" cy="530" rx="6" ry="4" fill="#95A5A6"/>
+    <circle cx="445" cy="528" r="3" fill="#7F8C8D"/>
+    <polygon points="442,528 440,526 440,530" fill="#F39C12"/>
+    
+    <ellipse cx="520" cy="525" rx="6" ry="4" fill="#95A5A6"/>
+    <circle cx="515" cy="523" r="3" fill="#7F8C8D"/>
+    <polygon points="512,523 510,521 510,525" fill="#F39C12"/>
+  </g>
+  
+  <!-- Trash cans -->
+  <g>
+    <rect x="200" y="470" width="20" height="30" fill="#2ECC71" rx="3"/>
+    <rect x="202" y="465" width="16" height="5" fill="#27AE60"/>
+    <circle cx="210" cy="485" r="8" fill="#E8F8F5" opacity="0.8"/>
+    
+    <rect x="950" y="480" width="20" height="30" fill="#3498DB" rx="3"/>
+    <rect x="952" y="475" width="16" height="5" fill="#2980B9"/>
+    <circle cx="960" cy="495" r="8" fill="#EBF5FB" opacity="0.8"/>
+  </g>
+</svg>

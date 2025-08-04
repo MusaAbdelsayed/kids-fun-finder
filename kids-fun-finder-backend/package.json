@@ -1,0 +1,26 @@
+{
+  "name": "kids-fun-finder-backend",
+  "version": "1.0.0",
+  "description": "Backend for Kids Fun Finder application to discover nearby activities for children.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test-db": "node src/scripts/testDb.js",
+    "seed-db": "node -e \"require('./src/controllers/placesController');\""
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@googlemaps/google-maps-services-js": "^3.4.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.21.2",
+    "kids-fun-finder-backend": "file:",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
