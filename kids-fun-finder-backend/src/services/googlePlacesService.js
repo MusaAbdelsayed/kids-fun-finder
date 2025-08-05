@@ -569,26 +569,23 @@ async function getKidsActivitiesByZipCode(zipCode, options = {}) {
         const enhancedPlaces = await enhancePlacesWithDetails(uniquePlaces);
         console.log(`Enhanced ${enhancedPlaces.length} places with detailed information`);
         
-        // Format places for our app with time slots
+        // Format places for our app
         const formattedPlaces = [];
         
         enhancedPlaces.forEach(place => {
             // Add required fields for our app
-            const basePlace = {
+            const formattedPlace = {
                 ...place,
                 zipCode: zipCode,
                 budget: place.price || 'Price not available',
                 accessibility: 'Please call to confirm accessibility',
                 image: place.photos && place.photos.length > 0 ? 
                     `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=${process.env.GOOGLE_PLACES_API_KEY}` : 
-                    '/api/placeholder/400/300'
+                    '/api/placeholder/400/300',
+                time: 'all-day' // Default time, can be filtered later if needed
             };
             
-            // Create entries for both morning and afternoon
-            const morningPlace = { ...basePlace, time: 'morning' };
-            const afternoonPlace = { ...basePlace, time: 'afternoon' };
-            
-            formattedPlaces.push(morningPlace, afternoonPlace);
+            formattedPlaces.push(formattedPlace);
         });
         
         console.log(`Formatted ${formattedPlaces.length} place entries with time slots`);
